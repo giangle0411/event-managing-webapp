@@ -1,10 +1,11 @@
 <template>
   <div id="nav" class="nav">
-    <router-link to="/" class="brand">Real World Events</router-link>
-    <nav>
-      <router-link :to="{ name: 'event-list' }">List</router-link> |
-      <router-link :to="{ name: 'event-create' }">Create</router-link>
-    </nav>
+    <v-app-bar app color="#39b982">
+      <v-btn text to="/">Real World Events</v-btn>
+      <v-spacer></v-spacer>
+      <v-btn text :to="{ name: 'event-list' }"> List</v-btn>
+      <v-btn text :to="{ name: 'event-create' }">Create</v-btn>
+    </v-app-bar>
   </div>
 </template>
 
@@ -28,7 +29,7 @@ export default {}
 }
 .nav .nav-item {
   box-sizing: border-box;
-  margin: 0 5px;
+  margin: 0 10px;
   color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
 }
